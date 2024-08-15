@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageHeader />
+    <PageWelcome />
     <slot />
   </div>
 </template>

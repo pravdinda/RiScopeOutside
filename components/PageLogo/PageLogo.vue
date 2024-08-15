@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-    <h1 class="logo__title">Riscope</h1>
+    <h2 class="logo__title">Riscope</h2>
     <span class="logo__status">{{ status }}</span>
   </div>
 </template>

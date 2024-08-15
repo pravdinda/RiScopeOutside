@@ -1,0 +1,1 @@
+export { default as PageWelcome } from './PageWelcome.vue';
