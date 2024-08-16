@@ -7,6 +7,7 @@
         Our service offers an advanced automation system that helps you manage
         risks effectively and reduce your time costs
       </p>
+      <WelcomeForm />
     </div>
   </section>
 </template>
@@ -37,6 +38,7 @@ import PageHeader from "@/layouts/PageHeader/PageHeader";
     text-align: center;
   }
   &__paragraph {
+    margin: 25px 0 0 0;
     font-size: 18px;
     line-height: 25px;
     text-align: center;

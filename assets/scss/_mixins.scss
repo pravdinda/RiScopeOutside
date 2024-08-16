@@ -3,15 +3,17 @@
   padding: 0;
   list-style: none;
 }
-@mixin base-button($bg-color: $main-color) {
+@mixin base-button($bg-color: $main-color, $min-w: 100px) {
   padding: 8px 20px;
   border-radius: 10px;
-  min-width: 100px;
+  min-width: $min-w;
   font-size: 16px;
   line-height: 19px;
   color: $background-color;
   text-align: center;
   background-color: $bg-color;
+  border: none;
+  outline: none;
   cursor: pointer;
   &:hover {
     background-color: $blue-color;
