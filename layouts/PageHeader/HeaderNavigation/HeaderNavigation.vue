@@ -18,8 +18,8 @@
   align-items: center;
   gap: 25px;
   &__item {
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 16px;
+    line-height: 19px;
   }
 }
 </style>

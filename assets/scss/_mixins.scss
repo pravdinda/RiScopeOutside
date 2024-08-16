@@ -6,10 +6,9 @@
 @mixin base-button($bg-color: $main-color) {
   padding: 8px 20px;
   border-radius: 10px;
-  min-width: 150px;
-  width: 100%;
-  font-size: 18px;
-  line-height: 25px;
+  min-width: 100px;
+  font-size: 16px;
+  line-height: 19px;
   color: $background-color;
   text-align: center;
   background-color: $bg-color;

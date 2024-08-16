@@ -10,6 +10,9 @@
     </div>
   </section>
 </template>
+<script setup lang="ts">
+import PageHeader from "@/layouts/PageHeader/PageHeader";
+</script>
 <style scoped lang="scss">
 .welcome {
   margin: 0 auto;
