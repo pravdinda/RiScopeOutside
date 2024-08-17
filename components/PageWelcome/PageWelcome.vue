@@ -1,18 +1,19 @@
 <template>
   <section class="welcome">
-    <PageHeader />
     <div class="welcome__content">
-      <h1 class="welcome__title">Risk management automation Service</h1>
+      <h1 class="welcome__title">{{ title }}</h1>
       <p class="welcome__paragraph">
-        Our service offers an advanced automation system that helps you manage
-        risks effectively and reduce your time costs
+        {{ description }}
       </p>
       <WelcomeForm />
     </div>
   </section>
 </template>
 <script setup lang="ts">
-import PageHeader from "@/layouts/PageHeader/PageHeader";
+defineProps<{
+  title: string;
+  description: string;
+}>();
 </script>
 <style scoped lang="scss">
 .welcome {
@@ -42,6 +43,19 @@ import PageHeader from "@/layouts/PageHeader/PageHeader";
     font-size: 18px;
     line-height: 25px;
     text-align: center;
+  }
+}
+.welcome_footer {
+  height: auto;
+  background: none;
+  .welcome__content {
+    max-width: 780px;
+    width: 100%;
+    margin: 80px auto 50px auto;
+    .welcome__paragraph {
+      margin: 0 auto;
+      width: 670px;
+    }
   }
 }
 </style>

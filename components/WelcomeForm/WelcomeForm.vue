@@ -32,4 +32,12 @@
   font-size: 16px;
   line-height: 25px;
 }
+.footer {
+  .welcome__submit {
+    @include base-button($min-w: 250px, $dark: true);
+  }
+  .welcome-form__comment {
+    color: $lightgray-color;
+  }
+}
 </style>
