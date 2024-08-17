@@ -1,8 +1,10 @@
 <template>
-  <div class="logo" :class="{ logo_white: white }">
-    <h2 class="logo__title">Riscope</h2>
-    <span class="logo__status">{{ status }}</span>
-  </div>
+  <NuxtLink to="/">
+    <div class="logo" :class="{ logo_white: white }">
+      <h2 class="logo__title">Riscope</h2>
+      <span class="logo__status">{{ status }}</span>
+    </div>
+  </NuxtLink>
 </template>
 <script setup lang="ts">
 withDefaults(

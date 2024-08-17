@@ -10,6 +10,7 @@
   padding: 0 0 50px 0;
   text-align: center;
   &__text {
+    margin: 0;
     color: $gray-color;
     font-size: 12px;
     line-height: 14px;
@@ -18,6 +19,8 @@
 }
 </style>
 <script setup lang="ts">
-const currentDate = new Date();
-const currentYear = currentDate.getFullYear();
+import { computed } from "vue";
+const currentYear = computed(() => {
+  return new Date().getFullYear();
+});
 </script>
