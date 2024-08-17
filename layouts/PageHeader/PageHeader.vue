@@ -1,8 +1,8 @@
 <template>
   <div class="header">
-    <PageLogo status="beta" />
+    <PageLogo status="beta" class="header__logo" />
     <HeaderNavigation />
-    <HeaderSubNavigation />
+    <HeaderSubNavigation class="header__subnavigation" />
   </div>
 </template>
 <script setup lang="ts">
@@ -18,8 +18,16 @@ import HeaderSubNavigation from "./HeaderSubNavigation/HeaderSubNavigation";
   height: 80px;
   padding: 20px 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: relative;
+  &__logo {
+    position: absolute;
+    left: 40px;
+  }
+  &__subnavigation {
+    position: absolute;
+    right: 40px;
+  }
 }
 </style>
