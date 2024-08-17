@@ -1,14 +1,14 @@
 <template>
   <div class="header">
     <PageLogo status="beta" class="header__logo" />
-    <HeaderNavigation />
-    <HeaderSubNavigation class="header__subnavigation" />
+    <NavigationList />
+    <SubNavigation class="header__subnavigation" />
   </div>
 </template>
 <script setup lang="ts">
 import PageLogo from "@/components/PageLogo/PageLogo";
-import HeaderNavigation from "./HeaderNavigation/HeaderNavigation";
-import HeaderSubNavigation from "./HeaderSubNavigation/HeaderSubNavigation";
+import NavigationList from "@/components/NavigationList/NavigationList";
+import SubNavigation from "@/components/SubNavigation/SubNavigation";
 </script>
 <style scoped lang="scss">
 .header {

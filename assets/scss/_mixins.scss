@@ -4,7 +4,7 @@
   list-style: none;
 }
 @mixin base-button($bg-color: $main-color, $min-w: 100px, $dark: false) {
-  padding: 8px 20px;
+  padding: 6px 20px;
   border-radius: 10px;
   min-width: $min-w;
   font-size: 16px;
@@ -16,13 +16,13 @@
   outline: none;
   cursor: pointer;
   transition: ease-in-out .365s;
-  &:hover {
-    background-color: $blue-color;
-  }
   @if $dark {
     background-color: $lightgray-color;
     color: $main-color;
-    &:hover {
+  }
+  &:hover {
+    background-color: $blue-color;
+    @if $dark {
       background-color: $main-color;
       color: $lightgray-color;
     }
