@@ -7,8 +7,9 @@
 </template>
 <script setup lang="ts">
 definePageMeta({
-  title: "index",
+  layout: "default",
 });
+
 useHead({
   title: "RIScope",
   meta: [
