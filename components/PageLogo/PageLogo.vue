@@ -1,5 +1,5 @@
 <template>
-  <div class="logo">
+  <div class="logo" :class="{ logo_white: white }">
     <h2 class="logo__title">Riscope</h2>
     <span class="logo__status">{{ status }}</span>
   </div>
@@ -8,9 +8,11 @@
 withDefaults(
   defineProps<{
     status?: string;
+    white?: boolean;
   }>(),
   {
     status: "",
+    white: false,
   }
 );
 </script>
@@ -18,9 +20,12 @@ withDefaults(
 .logo {
   display: flex;
   align-items: flex-end;
+  color: $main-color;
+  &_white {
+    color: $background-color;
+  }
   &__title {
     margin: 0;
-    color: $main-color;
     font-size: 25px;
     line-height: 30px;
     font-weight: 600;
