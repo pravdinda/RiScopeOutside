@@ -1,18 +1,19 @@
 <template>
   <div>
-    <PageHeader />
+    <LayoutsPageHeader />
 
     <slot />
-    <PageFooter>
+    <LayoutsPageFooter>
       <PageWelcome
+        v-if="route.meta.footerWelcome"
         title="Transform Your Project Management with Riscope"
         description="Leveraging years of experience working with over 30 companies, we have developed Riscope — a revolutionary solution for automating calculations and risk analysis in projects."
         class="welcome_footer"
+        :showFooter="false"
       />
-    </PageFooter>
+    </LayoutsPageFooter>
   </div>
 </template>
 <script setup lang="ts">
-import PageHeader from "@/layouts/PageHeader/PageHeader";
-import PageFooter from "@/layouts/PageFooter/PageFooter";
+const route = useRoute();
 </script>

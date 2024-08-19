@@ -7,27 +7,39 @@
       </p>
       <WelcomeForm />
     </div>
+    <div class="welcome__footer" v-if="showFooter">
+      <div class="welcome__raiting">
+        <NuxtImg src="img/stars.png" class="raiting" />
+        <p class="raiting__comment">More than 1,000+ users</p>
+      </div>
+      <ul class="welcome__links">
+        <li>Privacy</li>
+        <li>Terms</li>
+      </ul>
+    </div>
   </section>
 </template>
 <script setup lang="ts">
 defineProps<{
   title: string;
   description: string;
+  showFooter: boolean;
 }>();
 </script>
 <style scoped lang="scss">
 .welcome {
-  margin: 0 auto;
+  margin: 0 auto 150px;
   max-width: 1440px;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-image: url("./img/welcome_bg.svg");
   background-repeat: no-repeat;
-  background-position: 0 50px;
+  background-position: 0 30%;
   &__content {
-    margin: 80px auto 0 auto;
+    margin: auto;
     max-width: 670px;
     width: 100%;
   }
@@ -44,6 +56,20 @@ defineProps<{
     line-height: 25px;
     text-align: center;
   }
+  &__footer {
+    margin: 0 0 40px 0;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__links {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
 }
 .welcome_footer {
   height: auto;
@@ -56,6 +82,17 @@ defineProps<{
       margin: 0 auto;
       width: 670px;
     }
+  }
+}
+.raiting {
+  margin: 0 0 10px 0;
+  width: 145px;
+  height: 25px;
+  &__comment {
+    margin: 0;
+    font-size: 16px;
+    line-height: 25px;
+    color: $gray-color;
   }
 }
 </style>

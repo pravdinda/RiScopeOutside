@@ -3,7 +3,8 @@
 </template>
 <script setup lang="ts">
 definePageMeta({
-  layout: "price",
+  layout: "default",
+  footerWelcome: false,
 });
 
 useHead({
