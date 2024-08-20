@@ -9,7 +9,7 @@
     </div>
     <div class="welcome__footer" v-if="showFooter">
       <div class="welcome__raiting">
-        <NuxtImg src="img/stars.png" class="raiting" />
+        <img :src="stars" class="raiting" />
         <p class="raiting__comment">More than 1,000+ users</p>
       </div>
       <ul class="welcome__links">
@@ -20,6 +20,8 @@
   </section>
 </template>
 <script setup lang="ts">
+import stars from "@/public/img/stars.png";
+
 defineProps<{
   title: string;
   description: string;

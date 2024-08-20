@@ -53,6 +53,7 @@ defineProps<{
   }
   &__title {
     margin: 0;
+    width: 100%;
     font-size: 18px;
     line-height: 25px;
     font-weight: 700;

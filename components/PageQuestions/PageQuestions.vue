@@ -13,7 +13,7 @@
   </section>
 </template>
 <script setup lang="ts">
-import QuestionsList from "./QuestionsList/QuestionsList";
+import { QuestionsList } from "@/components/PageQuestions/QuestionsList";
 import { questions } from "./questions";
 </script>
 <style scoped lang="scss">
