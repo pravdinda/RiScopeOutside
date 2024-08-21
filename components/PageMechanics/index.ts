@@ -1,0 +1,1 @@
+export { default as PageMechanics } from './PageMechanics.vue';

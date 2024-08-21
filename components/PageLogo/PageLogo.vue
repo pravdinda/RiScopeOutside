@@ -39,5 +39,8 @@ withDefaults(
     font-weight: 400;
     font-style: italic;
   }
+  &:hover {
+    color: $blue-color;
+  }
 }
 </style>

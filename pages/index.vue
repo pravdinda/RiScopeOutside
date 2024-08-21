@@ -6,6 +6,8 @@
     showFooter
   />
   <div class="wrapper">
+    <PageMechanics />
+    <PageOpportunities />
     <PageOptimize />
     <PageQuestions />
   </div>
