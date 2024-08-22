@@ -12,6 +12,7 @@
       }"
     />
     <div v-if="emailError" class="inputError">Поле заполено неверно</div>
+    <div v-if="emailSuccess" class="inputSuccess">Вы молодец, ждите письмо</div>
   </div>
 </template>
 <script setup lang="ts">
@@ -54,6 +55,12 @@ watch(inputEmail, () => {
   line-height: 18px;
   font-weight: 400;
   color: rgba(217, 78, 78, 1);
+}
+.inputSuccess {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(11, 140, 86, 1);
 }
 .emailInput {
   padding: 10px;
