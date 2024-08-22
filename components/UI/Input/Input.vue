@@ -6,7 +6,10 @@
       :placeholder="inputPlaceholder"
       autocomplete="off"
       class="emailInput"
-      :class="[!emailError ? 'emailInput_success' : '', 'emailInput_error']"
+      :class="{
+        emailInput_error: emailError,
+        emailInput_success: emailSuccess,
+      }"
     />
     <div v-if="emailError" class="inputError">Поле заполено неверно</div>
   </div>
@@ -17,7 +20,8 @@ defineProps<{
   inputPlaceholder: string;
 }>();
 const inputEmail = ref("");
-const emailError = ref(null);
+const emailError = ref(false);
+const emailSuccess = ref(false);
 const validateEmailRegex = /^\S+@\S+\.\S+$/;
 function isEmailValid() {
   return validateEmailRegex.test(inputEmail.value);
@@ -26,8 +30,15 @@ watch(inputEmail, () => {
   let emailValid = isEmailValid();
   if (!emailValid) {
     emailError.value = true;
-  } else {
+    emailSuccess.value = false;
+  }
+  if (emailValid) {
     emailError.value = false;
+    emailSuccess.value = true;
+  }
+  if (inputEmail.value === "") {
+    emailError.value = false;
+    emailSuccess.value = false;
   }
 });
 </script>
