@@ -6,6 +6,7 @@
     showFooter
   />
   <div class="wrapper">
+    <PageProcess />
     <PageMechanics />
     <PageOpportunities />
     <PageOptimize />

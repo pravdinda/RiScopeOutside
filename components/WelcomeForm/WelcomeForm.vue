@@ -1,12 +1,15 @@
 <template>
   <div class="welcome__form">
-    <input type="email" class="welcome__input" placeholder="@ Enter email" />
+    <Input inputType="email" inputPlaceholder="@ Enter email" />
     <div class="welcome-form__footer">
       <button class="welcome__submit">To get a taste</button>
       <p class="welcome-form__comment">We do not request any bank card</p>
     </div>
   </div>
 </template>
+<script setup lang="ts">
+import { Input } from "../UI/Input";
+</script>
 <style scoped lang="scss">
 .welcome__form {
   margin: 40px auto 0 auto;
@@ -14,10 +17,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.welcome__input {
-  margin: 0 0 15px 0;
-  width: 100%;
 }
 .welcome__submit {
   @include base-button($min-w: 250px);
