@@ -19,11 +19,26 @@
           <img :src="version" class="mechanic__img" />
         </div>
         <ul class="mechanic__list">
-          <li>By its nature, a fishman is an alternative</li>
-          <li>By its nature, a fishman is an alternative</li>
-          <li>By its nature, a fishman is an alternative</li>
-          <li>By its nature, a fishman is an alternative</li>
-          <li>By its nature, a fishman is an alternative</li>
+          <li>
+            <img :src="check" />
+            By its nature, a fishman is an alternative
+          </li>
+          <li>
+            <img :src="check" />
+            By its nature, a fishman is an alternative
+          </li>
+          <li>
+            <img :src="check" />
+            By its nature, a fishman is an alternative
+          </li>
+          <li>
+            <img :src="check" />
+            By its nature, a fishman is an alternative
+          </li>
+          <li>
+            <img :src="check" />
+            By its nature, a fishman is an alternative
+          </li>
         </ul>
       </div>
       <div class="mechanic">
@@ -35,11 +50,26 @@
           <img :src="ai" class="mechanic__img" />
         </div>
         <ul class="mechanic__list">
-          <li>By its nature, a fishman is an alternative</li>
-          <li>By its nature, a fishman is an alternative</li>
-          <li>By its nature, a fishman is an alternative</li>
-          <li>By its nature, a fishman is an alternative</li>
-          <li>By its nature, a fishman is an alternative</li>
+          <li>
+            <img :src="globe" />
+            By its nature, a fishman is an alternative
+          </li>
+          <li>
+            <img :src="globe" />
+            By its nature, a fishman is an alternative
+          </li>
+          <li>
+            <img :src="globe" />
+            By its nature, a fishman is an alternative
+          </li>
+          <li>
+            <img :src="globe" />
+            By its nature, a fishman is an alternative
+          </li>
+          <li>
+            <img :src="globe" />
+            By its nature, a fishman is an alternative
+          </li>
         </ul>
       </div>
     </div>
@@ -48,6 +78,8 @@
 <script setup lang="ts">
 import version from "@/public/img/version.svg";
 import ai from "@/public/img/ai.svg";
+import check from "@/public/img/check.svg";
+import globe from "@/public/img/globe.svg";
 </script>
 <style scoped lang="scss">
 .mechanics {
@@ -124,10 +156,17 @@ import ai from "@/public/img/ai.svg";
     li {
       display: flex;
       justify-content: center;
+      align-items: center;
       margin: 0 0 20px 0;
       font-size: 16px;
       line-height: 25px;
       font-weight: 500;
+      img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        margin: 0 15px 0 0;
+      }
       &:last-child {
         margin: 0 0 0 0;
       }
