@@ -27,4 +27,9 @@
       color: $lightgray-color;
     }
   }
+  &:disabled {
+    background-color: $lightgray-color;
+    color: $main-color;
+    cursor: default;
+  }
 }
