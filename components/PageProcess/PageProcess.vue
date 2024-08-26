@@ -19,6 +19,26 @@
         <h3 class="process__content-title">Your company process view</h3>
         <img :src="company_process" />
       </div>
+      <div class="process__banner banner">
+        <div class="banner__wrapper">
+          <div class="banner__progress">
+            <div class="banner__progress-container">
+              <span class="banner__label">Riscope process view</span>
+              <progress value="10" max="100" class="banner__progress-item" />
+            </div>
+            <div class="banner__progress-container">
+              <span class="banner__label">Your company process view</span>
+              <progress value="100" max="100" class="banner__progress-item" />
+            </div>
+          </div>
+          <span class="banner__hours">+ 6h 15min</span>
+        </div>
+        <p class="banner__text">
+          Our service saves more than 6 hours of your team's time every week. It
+          covers all areas of risk and helps to optimize the budget, turning
+          risk management into a competitive advantage.
+        </p>
+      </div>
     </div>
   </section>
 </template>
@@ -47,6 +67,7 @@ import company_process from "@/public/img/company_process.png";
     text-align: center;
   }
   &__content {
+    position: relative;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -55,6 +76,17 @@ import company_process from "@/public/img/company_process.png";
       object-fit: contain;
     }
   }
+  &__banner {
+    padding: 25px 40px;
+    width: 817px;
+    min-height: 171px;
+    background-color: $blue-color;
+    color: $background-color;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
   &__content-title {
     margin: 0 0 30px 0;
     color: $blue-color;
@@ -62,6 +94,57 @@ import company_process from "@/public/img/company_process.png";
     line-height: 36px;
     font-weight: 600;
     text-align: center;
+  }
+}
+.banner {
+  background-image: url("img/bluetab_bg_l.svg");
+  background-position: 114% 89px;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__progress {
+    display: flex;
+    max-width: 360px;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__label {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  &__progress-item {
+    width: 100%;
+    height: 5px;
+    border: none;
+    background-color: transparent;
+  }
+  &__progress-item::-moz-progress-bar {
+    background-color: transparent;
+  }
+
+  &__progress-item::-webkit-progress-bar {
+    background-color: transparent;
+  }
+
+  &__progress-item::-webkit-progress-value {
+    background-color: $background-color;
+    border-radius: 5px;
+  }
+  &__hours {
+    margin: auto 0 auto auto;
+    font-size: 55px;
+    line-height: 67px;
+    font-weight: 600;
+  }
+  &__text {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
   }
 }
 </style>
