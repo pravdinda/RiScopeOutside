@@ -30,11 +30,9 @@ defineProps<{
 
   &_error {
     border: 1px solid rgba(217, 78, 78, 1);
-    box-shadow: 0 0 10px rgba(217, 78, 78, 0.2);
   }
   &_success {
     border: 1px solid rgba(47, 104, 70, 1);
-    box-shadow: 0 0 10px rgba(47, 104, 70, 0.2);
   }
 }
 </style>

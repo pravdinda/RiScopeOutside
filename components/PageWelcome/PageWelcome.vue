@@ -9,7 +9,9 @@
     </div>
     <div class="welcome__footer" v-if="showFooter">
       <div class="welcome__raiting">
-        <img :src="stars" class="raiting" />
+        <div class="raiting">
+          <img :src="star" v-for="n in 5" :key="n" />
+        </div>
         <p class="raiting__comment">More than 1,000+ users</p>
       </div>
       <ul class="welcome__links">
@@ -20,7 +22,7 @@
   </section>
 </template>
 <script setup lang="ts">
-import stars from "@/public/img/stars.png";
+import star from "@/public/img/star.svg";
 
 defineProps<{
   title: string;
@@ -88,8 +90,13 @@ defineProps<{
 }
 .raiting {
   margin: 0 0 10px 0;
-  width: 145px;
   height: 25px;
+  img {
+    margin: 0 5px 0 0;
+    &:last-child {
+      margin: 0 0 0 0;
+    }
+  }
   &__comment {
     margin: 0;
     font-size: 16px;
