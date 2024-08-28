@@ -8,7 +8,9 @@
   <div class="wrapper">
     <PageProcess />
     <PageMechanics />
-    <PageOpportunities />
+  </div>
+  <PageOpportunities />
+  <div class="wrapper">
     <PageOptimize />
     <PageQuestions />
   </div>

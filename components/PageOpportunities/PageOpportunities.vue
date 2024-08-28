@@ -36,8 +36,20 @@ import { opportunities } from "./opportunities";
   }
 }
 .opportunitie {
+  padding: 0 30px;
   margin: 0 0 70px 0;
   display: flex;
+  justify-content: space-between;
+  &:nth-child(1) .opportunitie__preview {
+    background-image: url("img/opp_1_l.svg"), url("img/opp_1_r.svg");
+    background-repeat: no-repeat;
+    background-position: 100% top, -15% bottom;
+  }
+  &:nth-child(2) .opportunitie__preview {
+    background-image: url("img/opp_2.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+  }
   &__title {
     margin: 0 0 20px 0;
     font-size: 30px;
@@ -45,8 +57,8 @@ import { opportunities } from "./opportunities";
     font-weight: 600;
   }
   &__container {
-    padding: 30px;
-    width: 50%;
+    padding: 30px 0;
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,9 +69,9 @@ import { opportunities } from "./opportunities";
     font-weight: 500;
   }
   &__preview {
-    width: 50%;
+    width: 55%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
   }
   &__img {
     width: 560px;
@@ -69,11 +81,13 @@ import { opportunities } from "./opportunities";
   }
   &:nth-child(2n) {
     flex-direction: row-reverse;
-    justify-content: flex-start;
+    justify-content: space-between;
     .opportunitie__preview {
       justify-content: center;
     }
     .opportunitie__container {
+      margin: 0 auto 0 0;
+      width: 45%;
       padding: 30px 0;
     }
   }

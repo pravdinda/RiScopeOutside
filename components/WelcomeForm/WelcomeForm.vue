@@ -1,19 +1,23 @@
 <template>
   <div class="welcome__form">
     <div class="inputWrapper">
+      <span
+        class="inputCheck"
+        :class="{
+          inputCheck_error: emailError,
+          inputCheck_success: emailSuccess,
+        }"
+        >@</span
+      >
       <Input
         inputType="email"
-        inputPlaceholder="@ Enter email"
+        inputPlaceholder="Enter email"
         v-model:email="email"
         :class="{
           emailInput_error: emailError,
           emailInput_success: emailSuccess,
         }"
       />
-      <div v-if="emailError" class="inputError">Поле заполено неверно</div>
-      <div v-if="emailSuccess" class="inputSuccess">
-        Вы молодец, ждите письмо
-      </div>
     </div>
     <div class="welcome-form__footer">
       <button class="welcome__submit" :disabled="!emailSuccess">
@@ -82,17 +86,21 @@ watch(email, () => {
   display: flex;
   flex-direction: column;
   margin: 0 0 15px 0;
+  position: relative;
 }
-.inputError {
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 400;
-  color: rgba(217, 78, 78, 1);
-}
-.inputSuccess {
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 400;
-  color: rgba(11, 140, 86, 1);
+.inputCheck {
+  display: inline-block;
+  position: absolute;
+  font-size: 20px;
+  top: 7px;
+  left: 7px;
+  transition: ease-in-out 0.365s;
+  color: $main-color;
+  &_success {
+    color: rgba(11, 140, 86, 1);
+  }
+  &_error {
+    color: rgba(217, 78, 78, 1);
+  }
 }
 </style>
