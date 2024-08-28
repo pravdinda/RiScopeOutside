@@ -15,8 +15,12 @@
         <p class="raiting__comment">More than 1,000+ users</p>
       </div>
       <ul class="welcome__links">
-        <li>Privacy</li>
-        <li>Terms</li>
+        <li>
+          <NuxtLink to="#" class="welcome__link"> Privacy </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="#" class="welcome__link"> Terms </NuxtLink>
+        </li>
       </ul>
     </div>
   </section>
@@ -73,6 +77,14 @@ defineProps<{
     display: flex;
     gap: 20px;
     list-style: none;
+  }
+  &__link {
+    color: $blue-color;
+    text-decoration: underline;
+    transition: ease-in-out 0.365s;
+    &:hover {
+      color: $main-color;
+    }
   }
 }
 .welcome_footer {
