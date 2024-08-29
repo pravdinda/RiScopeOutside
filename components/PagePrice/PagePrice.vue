@@ -5,7 +5,7 @@
         <ul class="price-block__structure-list">
           <li
             class="price-block__structure-item"
-            v-for="(item, index) in props.priceValue.structure.slice(0, 6)"
+            v-for="(item, index) in sliceStructure"
             :key="index"
           >
             <img :src="check_price" />
@@ -42,6 +42,9 @@ const props = defineProps<{
     structure: Array<string>;
   };
 }>();
+const sliceStructure = computed(() => {
+  return props.priceValue.structure.slice(0, 6);
+});
 </script>
 <style scoped lang="scss">
 .price-container {
