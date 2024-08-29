@@ -6,22 +6,11 @@
           The system is in beta testing. <br />You can use the service for free
         </h1>
         <PagePrice
-          :priceValue="{
-            currency: '$',
-            price: '0',
-            period: 'month',
-            launched: '1 March',
-            structure: structures[0].structure,
-          }"
-        />
-        <PagePrice
-          :priceValue="{
-            currency: '$',
-            price: '10',
-            period: 'year',
-            launched: '10 December',
-            structure: structures[1].structure,
-          }"
+          v-for="(
+            { currency, price, period, launched, structure }, index
+          ) in structures"
+          :priceValue="{ currency, price, period, launched, structure }"
+          :key="index"
         />
       </div>
     </div>

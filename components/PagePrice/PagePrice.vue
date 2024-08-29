@@ -5,7 +5,8 @@
         <ul class="price-block__structure-list">
           <li
             class="price-block__structure-item"
-            v-for="item in props.priceValue.structure"
+            v-for="(item, index) in props.priceValue.structure.slice(0, 6)"
+            :key="index"
           >
             <img :src="check_price" />
             {{ item }}
