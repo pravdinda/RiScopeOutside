@@ -23,11 +23,17 @@
         <div class="banner__wrapper">
           <div class="banner__progress">
             <div class="banner__progress-container">
-              <span class="banner__label">Riscope process view</span>
+              <div class="banner__label">
+                <span>Riscope process view</span>
+                <span>45 min</span>
+              </div>
               <progress value="10" max="100" class="banner__progress-item" />
             </div>
             <div class="banner__progress-container">
-              <span class="banner__label">Your company process view</span>
+              <div class="banner__label">
+                <span>Your company process view</span>
+                <span>7 hour</span>
+              </div>
               <progress value="100" max="100" class="banner__progress-item" />
             </div>
           </div>
@@ -113,6 +119,9 @@ import company_process from "@/public/img/company_process.png";
     gap: 10px;
   }
   &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 12px;
     line-height: 14px;
   }
