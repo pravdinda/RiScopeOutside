@@ -64,6 +64,7 @@ import { opportunities } from "./opportunities";
     background-position: 100% -73px;
     transform: rotate(-9.39deg);
     top: -33px;
+    left: -25px;
   }
   &:nth-child(4) .opportunitie__preview::before {
     background-image: url("img/opp_4.svg");

@@ -1,0 +1,1 @@
+export { default as PagePrice } from './PagePrice.vue';
