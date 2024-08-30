@@ -37,7 +37,7 @@
               <progress value="100" max="100" class="banner__progress-item" />
             </div>
           </div>
-          <span class="banner__hours">+ 6h 15min</span>
+          <span class="banner__hours">– 6h 15min</span>
         </div>
         <p class="banner__text">
           Our service saves more than 6 hours of your team's time every week. It
