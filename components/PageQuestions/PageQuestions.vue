@@ -1,10 +1,9 @@
 <template>
   <section class="questions">
     <div class="questions__container container_left">
-      <h2 class="questions__title">Any questions? We goy you.</h2>
+      <h2 class="questions__title">{{ $t("questions.title") }}</h2>
       <p class="questions__description">
-        With our service, you can minimize risks, improve operational control,
-        and significantly save time and resources
+        {{ $t("questions.description") }}
       </p>
     </div>
     <div class="questions__container container_right">

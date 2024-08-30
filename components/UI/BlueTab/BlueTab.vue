@@ -1,11 +1,9 @@
 <template>
   <div class="bluetab">
     <div class="bluetab__content">
-      <h3 class="bluetab__title">Optimise your work through Workflow</h3>
+      <h3 class="bluetab__title">{{ $t("optimise.title") }}</h3>
       <p class="bluetab__description">
-        Riscope streamlines routine tasks, freeing up more than 6 hours for your
-        team each week. This allows you to focus on strategically important
-        tasks, improving project quality and accelerating execution.
+        {{ $t("optimise.description") }}
       </p>
     </div>
   </div>
@@ -22,7 +20,7 @@
   background-position: right;
   border-radius: 10px;
   &__content {
-    width: 670px;
+    width: 730px;
   }
   &__title {
     margin: 0 0 30px 0;

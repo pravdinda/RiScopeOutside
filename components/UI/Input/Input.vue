@@ -5,14 +5,23 @@
     :placeholder="inputPlaceholder"
     autocomplete="off"
     class="emailInput"
+    :class="{ emailInput_dark: dark }"
   />
 </template>
 <script setup lang="ts">
 const email = defineModel("email");
-defineProps<{
-  inputType: string;
-  inputPlaceholder: string;
-}>();
+withDefaults(
+  defineProps<{
+    inputType: string;
+    inputPlaceholder: string;
+    dark: boolean;
+  }>(),
+  {
+    inputType: "",
+    inputPlaceholder: "",
+    dark: false,
+  }
+);
 </script>
 <style scoped lang="scss">
 .emailInput {
@@ -27,12 +36,13 @@ defineProps<{
     color: $main-color;
     opacity: 0.5;
   }
-
-  &_error {
-    border: 1px solid rgba(217, 78, 78, 1);
-  }
-  &_success {
-    border: 1px solid rgba(47, 104, 70, 1);
+  &_dark {
+    background-color: rgba(42, 42, 42, 1);
+    color: $background-color;
+    border: 1px solid rgba(42, 42, 42, 1);
+    &::placeholder {
+      color: $background-color;
+    }
   }
 }
 </style>

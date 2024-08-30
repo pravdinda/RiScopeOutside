@@ -5,14 +5,14 @@
       <p class="welcome__paragraph">
         {{ description }}
       </p>
-      <WelcomeForm />
+      <WelcomeForm :dark="dark" />
     </div>
     <div class="welcome__footer" v-if="showFooter">
       <div class="welcome__raiting">
         <div class="raiting">
           <img :src="star" v-for="n in 5" :key="n" />
         </div>
-        <p class="raiting__comment">More than 1,000+ users</p>
+        <p class="raiting__comment">{{ $t("welcome.raitingUsersCount") }}</p>
       </div>
       <ul class="welcome__links">
         <li>
@@ -27,12 +27,15 @@
 </template>
 <script setup lang="ts">
 import star from "@/public/img/star.svg";
-
-defineProps<{
-  title: string;
-  description: string;
-  showFooter: boolean;
-}>();
+withDefaults(
+  defineProps<{
+    title: string;
+    description: string;
+    showFooter: boolean;
+    dark: boolean;
+  }>(),
+  { title: "", description: "", showFooter: false, dark: false }
+);
 </script>
 <style scoped lang="scss">
 .welcome {
@@ -48,7 +51,7 @@ defineProps<{
   background-position: 0 30%;
   &__content {
     margin: auto;
-    max-width: 670px;
+    max-width: 820px;
     width: 100%;
   }
   &__title {
@@ -59,7 +62,8 @@ defineProps<{
     text-align: center;
   }
   &__paragraph {
-    margin: 25px 0 0 0;
+    margin: 25px auto 0 auto;
+    width: 670px;
     font-size: 18px;
     line-height: 25px;
     text-align: center;
@@ -88,10 +92,11 @@ defineProps<{
   }
 }
 .welcome_footer {
+  margin: 0 auto 0;
   height: auto;
   background: none;
   .welcome__content {
-    max-width: 780px;
+    max-width: 810px;
     width: 100%;
     margin: 80px auto 50px auto;
     .welcome__paragraph {

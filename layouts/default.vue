@@ -6,10 +6,11 @@
     <LayoutsPageFooter>
       <PageWelcome
         v-if="route.meta.footerWelcome"
-        title="Transform Your Project Management with Riscope"
-        description="Leveraging years of experience working with over 30 companies, we have developed Riscope — a revolutionary solution for automating calculations and risk analysis in projects."
+        :title="$t('footer.title')"
+        :description="$t('footer.description')"
         class="welcome_footer"
         :showFooter="false"
+        dark
       />
     </LayoutsPageFooter>
   </div>

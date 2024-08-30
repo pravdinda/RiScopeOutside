@@ -11,24 +11,35 @@
       >
       <Input
         inputType="email"
-        inputPlaceholder="Enter email"
+        :inputPlaceholder="$t('form.emailPlaceholder')"
         v-model:email="email"
         :class="{
           emailInput_error: emailError,
           emailInput_success: emailSuccess,
         }"
+        :dark="dark"
       />
     </div>
     <div class="welcome-form__footer">
       <button class="welcome__submit" :disabled="!emailSuccess">
-        To get a taste
+        {{ $t("form.button") }}
       </button>
-      <p class="welcome-form__comment">We do not request any bank card</p>
+      <p class="welcome-form__comment">{{ $t("form.requestBankCard") }}</p>
     </div>
   </div>
 </template>
 <script setup lang="ts">
 import { Input } from "../UI/Input";
+
+withDefaults(
+  defineProps<{
+    dark: boolean;
+  }>(),
+  {
+    dark: false,
+  }
+);
+
 const email = ref("");
 const emailError = ref(false);
 const emailSuccess = ref(false);

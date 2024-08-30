@@ -2,11 +2,12 @@
   <div class="footer-navigation">
     <NavigationList class="footer-navigation__navigation" />
     <PageLogo status="beta" white />
-    <SubNavigation class="footer-navigation__subnavigation" />
+    <Select class="footer-navigation__subnavigation" />
   </div>
 </template>
 <script setup lang="ts">
 import PageLogo from "@/components/PageLogo/PageLogo";
+import Select from "@/components/UI/Select/Select";
 </script>
 <style scoped lang="scss">
 .footer-navigation {
