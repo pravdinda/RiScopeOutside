@@ -32,15 +32,10 @@
   </div>
 </template>
 <script setup lang="ts">
+import type { PriceValue } from "@/types";
 import check_price from "@/public/img/check_price.svg";
 const props = defineProps<{
-  priceValue: {
-    currency: string;
-    price: string;
-    period: string;
-    launched: string;
-    structure: Array<string>;
-  };
+  priceValue: PriceValue;
 }>();
 const sliceStructure = computed(() => {
   return props.priceValue.structure.slice(0, 6);

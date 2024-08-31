@@ -5,23 +5,18 @@
     :placeholder="inputPlaceholder"
     autocomplete="off"
     class="emailInput"
-    :class="{ emailInput_dark: dark }"
+    :class="{ emailInput_dark: isDark }"
   />
 </template>
 <script setup lang="ts">
+import type { InputFormComponent } from "@/types/index";
+
 const email = defineModel("email");
-withDefaults(
-  defineProps<{
-    inputType: string;
-    inputPlaceholder: string;
-    dark?: boolean;
-  }>(),
-  {
-    inputType: "",
-    inputPlaceholder: "",
-    dark: false,
-  }
-);
+withDefaults(defineProps<InputFormComponent>(), {
+  inputType: "",
+  inputPlaceholder: "",
+  isDark: false,
+});
 </script>
 <style lang="scss">
 .emailInput {

@@ -25,5 +25,5 @@ export default defineNuxtConfig({
       }
     }
   },
-  css: ['normalize.css/normalize.css', '~/assets/scss/main.scss']
+  css: ['normalize.css/normalize.css', '~/assets/scss/main.scss'],
 })

@@ -8,9 +8,10 @@
   </ul>
 </template>
 <script setup lang="ts">
+import type { Question } from "@/types";
 import { QuestionItem } from "../QuestionItem";
 defineProps<{
-  questions: Array<T>;
+  questions: Array<Question>;
 }>();
 </script>
 <style lang="scss">

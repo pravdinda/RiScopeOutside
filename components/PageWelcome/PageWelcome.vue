@@ -5,7 +5,7 @@
       <p class="welcome__paragraph">
         {{ description }}
       </p>
-      <WelcomeForm :dark="dark" />
+      <WelcomeForm :isDark="isDark" />
     </div>
     <div class="welcome__footer" v-if="showFooter">
       <div class="welcome__raiting">
@@ -27,15 +27,13 @@
 </template>
 <script setup lang="ts">
 import star from "@/public/img/star.svg";
-withDefaults(
-  defineProps<{
-    title: string;
-    description: string;
-    showFooter: boolean;
-    dark?: boolean;
-  }>(),
-  { title: "", description: "", showFooter: false, dark: false }
-);
+import type { PageWelcomeComponent } from "@/types/index";
+withDefaults(defineProps<PageWelcomeComponent>(), {
+  title: "",
+  description: "",
+  showFooter: false,
+  isDark: false,
+});
 </script>
 <style lang="scss">
 .welcome {

@@ -8,13 +8,14 @@
     <PageProcess />
     <PageMechanics />
   </div>
-  <PageOpportunities />
+  <PageOpportunities :opportunities="opportunities" />
   <div class="wrapper">
     <PageOptimize />
     <PageQuestions />
   </div>
 </template>
 <script setup lang="ts">
+import { opportunities } from "~/components/PageOpportunities/opportunities.list";
 definePageMeta({
   layout: "default",
   footerWelcome: true,

@@ -10,7 +10,7 @@
         :description="$t('footer.description')"
         class="welcome_footer"
         :showFooter="false"
-        dark
+        isDark
       />
     </LayoutsPageFooter>
   </div>

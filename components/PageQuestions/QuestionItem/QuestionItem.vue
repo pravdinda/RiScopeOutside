@@ -3,14 +3,14 @@
     <div class="question-item__header">
       <h3
         class="question-item__title"
-        :class="{ 'question-item__title_open': itemOpen }"
+        :class="{ 'question-item__title_open': isItemOpen }"
         @click="handleOpenQuestion"
       >
         {{ question.question }}
       </h3>
-      <img :src="itemOpen ? close : open" />
+      <img :src="isItemOpen ? close : open" />
     </div>
-    <div class="question-item__content" :class="{ open: itemOpen }">
+    <div class="question-item__content" :class="{ open: isItemOpen }">
       <p class="question-item__text">
         {{ question.answer }}
       </p>
@@ -18,17 +18,15 @@
   </li>
 </template>
 <script setup lang="ts">
+import type { Question } from "@/types/index";
 import open from "@/public/img/open.svg";
 import close from "@/public/img/close.svg";
-const itemOpen = ref(false);
+const isItemOpen = ref(false);
 function handleOpenQuestion() {
-  return (itemOpen.value = !itemOpen.value);
+  isItemOpen.value = !isItemOpen.value;
 }
 defineProps<{
-  question: {
-    question: string;
-    answer: string;
-  };
+  question: Question;
 }>();
 </script>
 <style lang="scss">

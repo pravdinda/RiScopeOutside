@@ -1,22 +1,17 @@
 <template>
   <NuxtLink to="/">
-    <div class="logo" :class="{ logo_white: white }">
+    <div class="logo" :class="{ logo_white: isWhite }">
       <h2 class="logo__title">Riscope</h2>
       <span class="logo__status">{{ status }}</span>
     </div>
   </NuxtLink>
 </template>
 <script setup lang="ts">
-withDefaults(
-  defineProps<{
-    status?: string;
-    white?: boolean;
-  }>(),
-  {
-    status: "",
-    white: false,
-  }
-);
+import type { Logo } from "@/types/index";
+withDefaults(defineProps<Logo>(), {
+  status: "",
+  isWhite: false,
+});
 </script>
 <style lang="scss">
 .logo {

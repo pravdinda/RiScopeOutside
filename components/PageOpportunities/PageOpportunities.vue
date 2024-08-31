@@ -21,7 +21,11 @@
   </section>
 </template>
 <script setup lang="ts">
+import type { Opportunities } from "@/types/index";
 import { opportunities } from "./opportunities.list";
+defineProps<{
+  opportunities: Array<Opportunities>;
+}>();
 </script>
 <style lang="scss">
 .opportunities {

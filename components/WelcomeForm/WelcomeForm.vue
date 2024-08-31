@@ -4,8 +4,8 @@
       <span
         class="inputCheck"
         :class="{
-          inputCheck_error: emailError,
-          inputCheck_success: emailSuccess,
+          inputCheck_error: isEmailError,
+          inputCheck_success: isEmailSuccess,
         }"
         >@</span
       >
@@ -14,14 +14,14 @@
         :inputPlaceholder="$t('form.emailPlaceholder')"
         v-model:email="email"
         :class="{
-          emailInput_error: emailError,
-          emailInput_success: emailSuccess,
+          emailInput_error: isEmailError,
+          emailInput_success: isEmailSuccess,
         }"
-        :dark="dark"
+        :isDark="isDark"
       />
     </div>
     <div class="welcome-form__footer">
-      <button class="welcome__submit" :disabled="!emailSuccess">
+      <button class="welcome__submit" :disabled="!isEmailSuccess">
         {{ $t("form.button") }}
       </button>
       <p class="welcome-form__comment">{{ $t("form.requestBankCard") }}</p>
@@ -29,20 +29,16 @@
   </div>
 </template>
 <script setup lang="ts">
+import type { WelcomeFormComponent } from "@/types/index";
 import { Input } from "../UI/Input";
 
-withDefaults(
-  defineProps<{
-    dark?: boolean;
-  }>(),
-  {
-    dark: false,
-  }
-);
+withDefaults(defineProps<WelcomeFormComponent>(), {
+  isDark: false,
+});
 
 const email = ref("");
-const emailError = ref(false);
-const emailSuccess = ref(false);
+const isEmailError = ref(false);
+const isEmailSuccess = ref(false);
 const validateEmailRegex = /^\S+@\S+\.\S+$/;
 function isEmailValid() {
   return validateEmailRegex.test(email.value);
@@ -50,16 +46,16 @@ function isEmailValid() {
 watch(email, () => {
   let emailValid = isEmailValid();
   if (!emailValid) {
-    emailError.value = true;
-    emailSuccess.value = false;
+    isEmailError.value = true;
+    isEmailSuccess.value = false;
   }
   if (emailValid) {
-    emailError.value = false;
-    emailSuccess.value = true;
+    isEmailError.value = false;
+    isEmailSuccess.value = true;
   }
   if (email.value === "") {
-    emailError.value = false;
-    emailSuccess.value = false;
+    isEmailError.value = false;
+    isEmailSuccess.value = false;
   }
 });
 </script>
