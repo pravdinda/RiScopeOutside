@@ -16,10 +16,10 @@
       <div class="price-block__right">
         <div class="price-block__price-container">
           <div class="price-block__price">
-            <span>{{ props.priceValue.currency }}</span>
-            <span>{{ props.priceValue.price }}</span>
+            <span>{{ priceValue.currency }}</span>
+            <span>{{ priceValue.price }}</span>
           </div>
-          <span class="price-block__time">/{{ props.priceValue.period }}</span>
+          <span class="price-block__time">/{{ priceValue.period }}</span>
         </div>
         <button class="price-block__button price-block__button_price">
           To get a taste
@@ -27,7 +27,7 @@
       </div>
     </div>
     <p class="price-container__launch">
-      The planned launch date of the service is {{ props.priceValue.launched }}
+      The planned launch date of the service is {{ priceValue.launched }}
     </p>
   </div>
 </template>
@@ -57,6 +57,7 @@ const sliceStructure = computed(() => {
   }
 }
 .price-block {
+  margin: 0 0 20px 0;
   padding: 39px 70px;
   width: 100%;
   background-color: $blue-color;

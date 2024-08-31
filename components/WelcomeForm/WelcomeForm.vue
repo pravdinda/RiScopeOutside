@@ -33,7 +33,7 @@ import { Input } from "../UI/Input";
 
 withDefaults(
   defineProps<{
-    dark: boolean;
+    dark?: boolean;
   }>(),
   {
     dark: false,

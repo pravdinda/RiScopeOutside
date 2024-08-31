@@ -14,7 +14,7 @@ withDefaults(
   defineProps<{
     inputType: string;
     inputPlaceholder: string;
-    dark: boolean;
+    dark?: boolean;
   }>(),
   {
     inputType: "",

@@ -32,7 +32,7 @@ withDefaults(
     title: string;
     description: string;
     showFooter: boolean;
-    dark: boolean;
+    dark?: boolean;
   }>(),
   { title: "", description: "", showFooter: false, dark: false }
 );
