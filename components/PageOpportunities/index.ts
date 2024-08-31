@@ -1,0 +1,1 @@
+export { default as PageOpportunities } from './PageOpportunities.vue';

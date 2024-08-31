@@ -1,0 +1,35 @@
+@mixin rest-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@mixin base-button($bg-color: $main-color, $min-w: 100px, $dark: false) {
+  padding: 8px 20px;
+  border-radius: 10px;
+  min-width: $min-w;
+  font-size: 16px;
+  line-height: 19px;
+  color: $background-color;
+  text-align: center;
+  background-color: $bg-color;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: ease-in-out .365s;
+  @if $dark {
+    background-color: $lightgray-color;
+    color: $main-color;
+  }
+  &:hover {
+    background-color: $blue-color;
+    @if $dark {
+      background-color: $blue-color;
+      color: $lightgray-color;
+    }
+  }
+  &:disabled {
+    background-color: $lightgray-color;
+    color: $main-color;
+    cursor: default;
+  }
+}

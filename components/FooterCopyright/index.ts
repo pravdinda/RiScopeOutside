@@ -1,0 +1,1 @@
+export { default as FooterCopyright } from './FooterCopyright.vue';

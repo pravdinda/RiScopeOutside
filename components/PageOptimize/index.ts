@@ -1,0 +1,1 @@
+export { default as PageOptimize } from './PageOptimize.vue';

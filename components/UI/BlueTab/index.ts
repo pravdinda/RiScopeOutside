@@ -1,0 +1,1 @@
+export { default as BlueTab } from './BlueTab.vue';
