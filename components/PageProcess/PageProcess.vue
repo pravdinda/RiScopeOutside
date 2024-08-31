@@ -52,7 +52,7 @@
 import riscope_process from "@/public/img/riscope_process.png";
 import company_process from "@/public/img/company_process.png";
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .process {
   margin: 0 0 150px 0;
   &__header {

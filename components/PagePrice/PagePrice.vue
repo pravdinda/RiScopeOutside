@@ -46,7 +46,7 @@ const sliceStructure = computed(() => {
   return props.priceValue.structure.slice(0, 6);
 });
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .price-container {
   margin: 0 0 40px 0;
   &__launch {

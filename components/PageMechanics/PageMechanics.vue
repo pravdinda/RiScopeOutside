@@ -81,7 +81,7 @@ import ai from "@/public/img/ai.svg";
 import check from "@/public/img/check.svg";
 import globe from "@/public/img/globe.svg";
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .mechanics {
   margin: 0 0 150px 0;
   &__header {

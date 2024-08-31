@@ -21,13 +21,13 @@
   </section>
 </template>
 <script setup lang="ts">
-import { opportunities } from "./opportunities";
+import { opportunities } from "./opportunities.list";
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .opportunities {
   margin: 0 0 150px 0;
   &__title {
-    margin: 0 0 70px 0;
+    margin: 0 0 50px 0;
     font-size: 40px;
     line-height: 48px;
     font-weight: 600;

@@ -31,7 +31,7 @@ defineProps<{
   };
 }>();
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .question-item {
   margin: 0 0 20px 0;
   border-bottom: 1px solid $gray-color;

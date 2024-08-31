@@ -8,9 +8,9 @@
   </ul>
 </template>
 <script setup lang="ts">
-import { navigation } from "./navigation";
+import { navigation } from "./navigation.list";
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .navigation {
   @include rest-list;
   width: 170px;

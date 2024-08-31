@@ -9,7 +9,7 @@
 import PageLogo from "@/components/PageLogo/PageLogo";
 import Select from "@/components/UI/Select/Select";
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .footer-navigation {
   margin: 0 auto;
   padding: 50px 0;

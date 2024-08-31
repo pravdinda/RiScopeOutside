@@ -18,7 +18,7 @@ withDefaults(
   }
 );
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .logo {
   display: flex;
   align-items: flex-end;

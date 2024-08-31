@@ -23,7 +23,7 @@ withDefaults(
   }
 );
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .emailInput {
   padding: 10px 35px;
   width: 100%;

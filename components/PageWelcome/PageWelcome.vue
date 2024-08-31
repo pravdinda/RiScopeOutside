@@ -37,7 +37,7 @@ withDefaults(
   { title: "", description: "", showFooter: false, dark: false }
 );
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .welcome {
   margin: 0 auto 150px;
   max-width: 1440px;

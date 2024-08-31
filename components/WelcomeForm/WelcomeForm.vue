@@ -63,7 +63,7 @@ watch(email, () => {
   }
 });
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .welcome__form {
   margin: 40px auto 0 auto;
   width: 444px;

@@ -9,7 +9,7 @@
 import FooterNavigation from "@/components/FooterNavigation/FooterNavigation";
 import FooterCopyright from "@/components/FooterCopyright/FooterCopyright";
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .footer {
   width: 100%;
   background-color: $main-color;

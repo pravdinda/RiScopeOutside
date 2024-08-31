@@ -13,9 +13,9 @@
 </template>
 <script setup lang="ts">
 import { QuestionsList } from "@/components/PageQuestions/QuestionsList";
-import { questions } from "./questions";
+import { questions } from "./questions.list";
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .questions {
   margin: 0 0 150px 0;
   display: flex;

@@ -17,20 +17,19 @@
   </section>
 </template>
 <script setup lang="ts">
-import { structures } from "~/components/PagePrice/structures";
+import { structures } from "~/components/PagePrice/structures.list";
 definePageMeta({
   layout: "default",
   footerWelcome: false,
 });
-
 useHead({
-  title: "RIScope - price",
+  title: "RIScope",
   meta: [
     { name: "description", content: "Risk management automation Service" },
   ],
 });
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .price {
   min-height: calc(100vh - 80px - 195px);
   display: flex;

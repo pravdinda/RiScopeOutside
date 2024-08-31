@@ -8,7 +8,7 @@
     </div>
   </div>
 </template>
-<style scoped lang="scss">
+<style lang="scss">
 .bluetab {
   padding: 80px 40px;
   width: 100%;

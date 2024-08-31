@@ -10,7 +10,7 @@ import PageLogo from "@/components/PageLogo/PageLogo";
 import NavigationList from "@/components/NavigationList/NavigationList";
 import SubNavigation from "@/components/SubNavigation/SubNavigation";
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .header {
   margin: 0 auto;
   max-width: 1440px;

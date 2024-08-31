@@ -3,8 +3,8 @@
     <PageLogo status="beta" class="error__logo" />
     <div class="error__container">
       <div class="error__content">
-        <h1 class="error__code">{{ props.error.statusCode }}</h1>
-        <p v-if="props.error.statusCode === 404" class="error__message">
+        <h1 class="error__code">{{ error.statusCode }}</h1>
+        <p v-if="error.statusCode === 404" class="error__message">
           This page could not be found
         </p>
         <NuxtLink to="/" class="error__button error__button_style"
@@ -16,12 +16,11 @@
 </template>
 <script setup lang="ts">
 import type { NuxtError } from "#app";
-
-const props = defineProps({
+defineProps({
   error: Object as () => NuxtError,
 });
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .error {
   display: flex;
   flex-direction: column;

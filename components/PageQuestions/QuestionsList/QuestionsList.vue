@@ -13,7 +13,7 @@ defineProps<{
   questions: Array<T>;
 }>();
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .questions-list {
   @include rest-list;
   display: flex;

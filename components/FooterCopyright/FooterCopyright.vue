@@ -5,7 +5,13 @@
     </p>
   </div>
 </template>
-<style scoped lang="scss">
+<script setup lang="ts">
+import { computed } from "vue";
+const currentYear = computed(() => {
+  return new Date().getFullYear();
+});
+</script>
+<style lang="scss">
 .footer-copyright {
   padding: 0 0 50px 0;
   text-align: center;
@@ -18,9 +24,3 @@
   }
 }
 </style>
-<script setup lang="ts">
-import { computed } from "vue";
-const currentYear = computed(() => {
-  return new Date().getFullYear();
-});
-</script>

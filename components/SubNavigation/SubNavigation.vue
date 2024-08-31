@@ -4,7 +4,7 @@
     <li class="subnavigation__item">Try free</li>
   </ul>
 </template>
-<style scoped lang="scss">
+<style lang="scss">
 .subnavigation {
   @include rest-list;
   gap: 15px;
