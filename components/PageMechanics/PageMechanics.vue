@@ -8,18 +8,20 @@
       </p>
     </div>
     <div class="mechanics__versions">
-      <div class="mechanic" v-for="item in mechanics">
+      <div class="mechanic" v-for="(item, index) in mechanics">
         <div class="mechanic__header">
-          <h3 class="mechanic__title">{{ item.title }}</h3>
+          <h3 class="mechanic__title">
+            {{ $t(`${item.title}[${index}].title`) }}
+          </h3>
           <p class="mechanic__description">
-            {{ item.description }}
+            {{ $t(`${item.description}[${index}].description`) }}
           </p>
           <img :src="item.image" class="mechanic__img" />
         </div>
         <ul class="mechanic__list">
-          <li v-for="listItem in item.list">
+          <li v-for="(listItem, index) in item.list">
             <img :src="item.icon" />
-            {{ listItem }}
+            {{ $t(`${listItem}.list[${index}]`) }}
           </li>
         </ul>
       </div>

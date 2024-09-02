@@ -6,13 +6,13 @@
         :class="{ 'question-item__title_open': isItemOpen }"
         @click="handleOpenQuestion"
       >
-        {{ question.question }}
+        {{ $t(`questions.data[${i}].question`) }}
       </h3>
       <img :src="isItemOpen ? close : open" />
     </div>
     <div class="question-item__content" :class="{ open: isItemOpen }">
       <p class="question-item__text">
-        {{ question.answer }}
+        {{ $t(`questions.data[${i}].answer`) }}
       </p>
     </div>
   </li>
@@ -27,6 +27,7 @@ function handleOpenQuestion() {
 }
 defineProps<{
   question: Question;
+  i: number;
 }>();
 </script>
 <style lang="scss">

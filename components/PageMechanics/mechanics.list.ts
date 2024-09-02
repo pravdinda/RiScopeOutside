@@ -2,29 +2,29 @@ import type { Mechanic } from "~/types";
 
 export const mechanics: Array<Mechanic> = [
   {
-    title: 'Today RiScope',
-    description: 'Some text for project to be based on my mind',
+    title: 'mechanics.data',
+    description: 'mechanics.data',
     image: './img/version.svg',
     icon: './img/check.svg',
     list: [
-      'By its nature, a fishman is an alternative',
-      'By its nature, a fishman is an alternative',
-      'By its nature, a fishman is an alternative',
-      'By its nature, a fishman is an alternative',
-      'By its nature, a fishman is an alternative',
+      'mechanics.data[0]',
+      'mechanics.data[0]',
+      'mechanics.data[0]',
+      'mechanics.data[0]',
+      'mechanics.data[0]',
     ]
   },
   {
-    title: 'Today RiScope',
-    description: 'Some text for project to be based on my mind',
+    title: 'mechanics.data',
+    description: 'mechanics.data',
     image: './img/ai.svg',
     icon: './img/globe.svg',
     list: [
-      'By its nature, a fishman is an alternative',
-      'By its nature, a fishman is an alternative',
-      'By its nature, a fishman is an alternative',
-      'By its nature, a fishman is an alternative',
-      'By its nature, a fishman is an alternative'
+      'mechanics.data[1]',
+      'mechanics.data[1]',
+      'mechanics.data[1]',
+      'mechanics.data[1]',
+      'mechanics.data[1]',
     ]
   }
 ]

@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: process.env.NODE_ENV === 'development' },
   modules: ["@nuxt/image", "@nuxtjs/i18n"],
   i18n: {
-    strategy: 'prefix_except_default',
+    strategy: 'no_prefix',
     locales: [
       {
         code: 'en',

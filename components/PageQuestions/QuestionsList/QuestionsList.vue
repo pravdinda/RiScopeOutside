@@ -3,6 +3,7 @@
     <QuestionItem
       v-for="(item, index) in questions"
       :key="index"
+      :i="index"
       :question="item"
     />
   </ul>

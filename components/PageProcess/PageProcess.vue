@@ -49,8 +49,8 @@
   </section>
 </template>
 <script setup lang="ts">
-import riscope_process from "@/public/img/riscope_process.png";
-import company_process from "@/public/img/company_process.png";
+import riscope_process from "@/public/img/riscope_process.svg";
+import company_process from "@/public/img/company_process.svg";
 </script>
 <style lang="scss">
 .process {

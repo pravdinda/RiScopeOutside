@@ -19,6 +19,12 @@ import type { NuxtError } from "#app";
 defineProps({
   error: Object as () => NuxtError,
 });
+useHead({
+  title: `RIScope - ${error.statusCode}`,
+  meta: [
+    { name: "description", content: "Risk management automation Service" },
+  ],
+});
 </script>
 <style lang="scss">
 .error {

@@ -8,6 +8,29 @@ const en = {
     comingSoon: 'ComingSoon',
     title: 'AI Assistant & AI based mechanics',
     description: 'By its nature, a fishman is an alternative to the traditional lorem ipsum, which causes some people to be puzzled when trying to read fish text.',
+    data: [{
+      title: 'Today RiScope',
+      description: 'Some text for project to be based on my mind',
+      list: [
+        'By its nature, a fishman is an alternative',
+        'By its nature, a fishman is an alternative',
+        'By its nature, a fishman is an alternative',
+        'By its nature, a fishman is an alternative',
+        'By its nature, a fishman is an alternative'
+      ]
+    },
+    {
+      title: 'New RiScope',
+      description: 'Some text for project to be based on my mind',
+      list: [
+        'By its nature, a fishman is an alternative',
+        'By its nature, a fishman is an alternative',
+        'By its nature, a fishman is an alternative',
+        'By its nature, a fishman is an alternative',
+        'By its nature, a fishman is an alternative'
+      ]
+    }
+    ]
   },
   optimise: {
     title: 'Optimise your work through Workflow',
@@ -16,6 +39,28 @@ const en = {
   questions: {
     title: 'Any questions? We goy you.',
     description: 'With our service, you can minimize risks, improve operational control, and significantly save time and resources',
+    data: [
+      {
+        question: 'Who is this product',
+        answer: 'By its nature, a fishman is an alternative to the traditional lorem ipsum, which causes some people to be puzzled when trying to read fish text.'
+      },
+      {
+        question: 'Who is this product',
+        answer: 'By its nature, a fishman is an alternative to the traditional lorem ipsum, which causes some people to be puzzled when trying to read fish text.'
+      },
+      {
+        question: 'Who is this product',
+        answer: 'By its nature, a fishman is an alternative to the traditional lorem ipsum, which causes some people to be puzzled when trying to read fish text.'
+      },
+      {
+        question: 'Who is this product',
+        answer: 'By its nature, a fishman is an alternative to the traditional lorem ipsum, which causes some people to be puzzled when trying to read fish text.'
+      },
+      {
+        question: 'Who is this product',
+        answer: 'By its nature, a fishman is an alternative to the traditional lorem ipsum, which causes some people to be puzzled when trying to read fish text.'
+      }
+    ]
   },
   footer: {
     title: 'Transform Your Project Management with Riscope',
