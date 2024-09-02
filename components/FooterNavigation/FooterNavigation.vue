@@ -1,7 +1,7 @@
 <template>
   <div class="footer-navigation">
     <NavigationList class="footer-navigation__navigation" />
-    <PageLogo status="beta" white />
+    <PageLogo status="beta" isWhite />
     <Select class="footer-navigation__subnavigation" />
   </div>
 </template>

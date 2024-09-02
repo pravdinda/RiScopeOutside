@@ -78,7 +78,9 @@ watch(email, () => {
   width: 180px;
   color: $gray-color;
   font-size: 16px;
-  line-height: 25px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
 }
 .footer {
   .welcome__submit {
