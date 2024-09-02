@@ -44,9 +44,6 @@ withDefaults(defineProps<PageWelcomeComponent>(), {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url("./img/welcome_bg.svg");
-  background-repeat: no-repeat;
-  background-position: 0 30%;
   &__content {
     margin: auto;
     max-width: 820px;
@@ -56,7 +53,7 @@ withDefaults(defineProps<PageWelcomeComponent>(), {
     margin: 0 0 20px 0;
     font-size: 55px;
     line-height: 67px;
-    font-weight: 600px;
+    font-weight: 600;
     text-align: center;
   }
   &__paragraph {

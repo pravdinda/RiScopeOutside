@@ -1,9 +1,11 @@
 <template>
-  <PageWelcome
-    :title="$t('welcome.title')"
-    :description="$t('welcome.description')"
-    showFooter
-  />
+  <div class="welcome-screen">
+    <PageWelcome
+      :title="$t('welcome.title')"
+      :description="$t('welcome.description')"
+      showFooter
+    />
+  </div>
   <div class="wrapper">
     <PageProcess />
     <PageMechanics />
@@ -21,3 +23,12 @@ definePageMeta({
   footerWelcome: true,
 });
 </script>
+<style type="scss">
+.welcome-screen {
+  background-image: url("./img/welcome_bg.svg");
+  background-repeat: no-repeat;
+  background-position: center 10%;
+  background-size: 90%;
+  background-size: contain;
+}
+</style>
