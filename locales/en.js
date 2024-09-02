@@ -4,6 +4,11 @@ const en = {
     description: 'Our service offers an advanced automation system that helps you manage risks effectively and reduce your time costs',
     raitingUsersCount: 'More than 1,000+ users',
   },
+  mechanics: {
+    comingSoon: 'ComingSoon',
+    title: 'AI Assistant & AI based mechanics',
+    description: 'By its nature, a fishman is an alternative to the traditional lorem ipsum, which causes some people to be puzzled when trying to read fish text.',
+  },
   optimise: {
     title: 'Optimise your work through Workflow',
     description: 'Riscope streamlines routine tasks, freeing up more than 6 hours for your team each week. This allows you to focus on strategically important tasks, improving project quality and accelerating execution.',

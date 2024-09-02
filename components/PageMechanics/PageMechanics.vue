@@ -1,74 +1,25 @@
 <template>
   <section class="mechanics">
     <div class="mechanics__header">
-      <span class="mechanics__soon">ComingSoon</span>
-      <h2 class="mechanics__title">AI Assistant & AI based mechanics</h2>
+      <span class="mechanics__soon">{{ $t("mechanics.comingSoon") }}</span>
+      <h2 class="mechanics__title">{{ $t("mechanics.title") }}</h2>
       <p class="mechanics__description">
-        By its nature, a fishman is an alternative to the traditional lorem
-        ipsum, which causes some people to be puzzled when trying to read fish
-        text.
+        {{ $t("mechanics.description") }}
       </p>
     </div>
     <div class="mechanics__versions">
-      <div class="mechanic">
+      <div class="mechanic" v-for="item in mechanics">
         <div class="mechanic__header">
-          <h3 class="mechanic__title">Today RiScope</h3>
+          <h3 class="mechanic__title">{{ item.title }}</h3>
           <p class="mechanic__description">
-            Some text for project to be based on my mind
+            {{ item.description }}
           </p>
-          <img :src="version" class="mechanic__img" />
+          <img :src="item.image" class="mechanic__img" />
         </div>
         <ul class="mechanic__list">
-          <li>
-            <img :src="check" />
-            By its nature, a fishman is an alternative
-          </li>
-          <li>
-            <img :src="check" />
-            By its nature, a fishman is an alternative
-          </li>
-          <li>
-            <img :src="check" />
-            By its nature, a fishman is an alternative
-          </li>
-          <li>
-            <img :src="check" />
-            By its nature, a fishman is an alternative
-          </li>
-          <li>
-            <img :src="check" />
-            By its nature, a fishman is an alternative
-          </li>
-        </ul>
-      </div>
-      <div class="mechanic">
-        <div class="mechanic__header">
-          <h3 class="mechanic__title">Today RiScope</h3>
-          <p class="mechanic__description">
-            Some text for project to be based on my mind
-          </p>
-          <img :src="ai" class="mechanic__img" />
-        </div>
-        <ul class="mechanic__list">
-          <li>
-            <img :src="globe" />
-            By its nature, a fishman is an alternative
-          </li>
-          <li>
-            <img :src="globe" />
-            By its nature, a fishman is an alternative
-          </li>
-          <li>
-            <img :src="globe" />
-            By its nature, a fishman is an alternative
-          </li>
-          <li>
-            <img :src="globe" />
-            By its nature, a fishman is an alternative
-          </li>
-          <li>
-            <img :src="globe" />
-            By its nature, a fishman is an alternative
+          <li v-for="listItem in item.list">
+            <img :src="item.icon" />
+            {{ listItem }}
           </li>
         </ul>
       </div>
@@ -76,10 +27,7 @@
   </section>
 </template>
 <script setup lang="ts">
-import version from "@/public/img/version.svg";
-import ai from "@/public/img/ai.svg";
-import check from "@/public/img/check.svg";
-import globe from "@/public/img/globe.svg";
+import { mechanics } from "./mechanics.list";
 </script>
 <style lang="scss">
 .mechanics {

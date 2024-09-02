@@ -20,6 +20,13 @@ export interface PriceValue {
   launched: string;
   structure: Array<string>;
 }
+export interface Mechanic {
+  title: string;
+  description: string;
+  image: string;
+  icon: string;
+  list: Array<string>;
+}
 export interface Opportunities {
   title: string;
   text: string;
