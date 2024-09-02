@@ -30,6 +30,7 @@ withDefaults(defineProps<InputFormComponent>(), {
   &::placeholder {
     color: $main-color;
     opacity: 0.5;
+    font-weight: 500;
   }
   &_dark {
     background-color: rgba(42, 42, 42, 1);
@@ -37,6 +38,7 @@ withDefaults(defineProps<InputFormComponent>(), {
     border: 1px solid rgba(42, 42, 42, 1);
     &::placeholder {
       color: $background-color;
+      font-weight: 500;
     }
   }
 }
