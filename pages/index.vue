@@ -22,6 +22,12 @@ definePageMeta({
   layout: "default",
   footerWelcome: true,
 });
+useHead({
+  title: "RIScope",
+  meta: [
+    { name: "description", content: "Risk management automation Service" },
+  ],
+});
 </script>
 <style type="scss">
 .welcome-screen {
