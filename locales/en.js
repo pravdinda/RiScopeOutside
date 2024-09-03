@@ -3,6 +3,8 @@ const en = {
     hour_short: 'h',
     hour: 'hour',
     min: 'min',
+    month: 'month',
+    year: 'year'
   },
   navigation: {
     mainNavigation: [
@@ -125,11 +127,17 @@ const en = {
   footer: {
     title: 'Transform Your Project Management with Riscope',
     description: 'Leveraging years of experience working with over 30 companies, we have developed Riscope — a revolutionary solution for automating calculations and risk analysis in projects.',
+    copyright: 'All rights are registered.',
   },
   form: {
     requestBankCard: 'We do not request any bank card',
     emailPlaceholder: 'Enter email',
     button: 'To get a taste'
+  },
+  price: {
+    title: 'The system is in beta testing. <br />You can use the service for free',
+    currency: '&dollar;',
+    launch: 'The planned launch date of the service is ',
   }
 }
 export default en;

@@ -4,16 +4,16 @@
       <h2 class="opportunities__title">{{ $t("opportunities.title") }}</h2>
       <ul class="opportunities__list">
         <li
-          v-for="(item, index) in opportunities"
+          v-for="({ title, text }, index) in opportunities"
           :key="index"
           class="opportunitie"
         >
           <div class="opportunitie__container">
             <h3 class="opportunitie__title">
-              {{ $t(`${item}[${index}].title`) }}
+              {{ $t(`${title}[${index}].title`) }}
             </h3>
             <div
-              v-html="$t(`${item}[${index}].text`)"
+              v-html="$t(`${text}[${index}].text`)"
               class="opportunitie__content"
             ></div>
           </div>

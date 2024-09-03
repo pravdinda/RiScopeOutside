@@ -1,7 +1,7 @@
 <template>
   <div class="footer-copyright">
     <p class="footer-copyright__text">
-      Copyright &copy; {{ currentYear }} ООО. Все права зарегистрированы.
+      &copy; {{ currentYear }} ООО. {{ $t("footer.copyright") }}
     </p>
   </div>
 </template>

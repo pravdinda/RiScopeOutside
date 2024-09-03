@@ -1,8 +1,11 @@
 export const structures = [ {
-  currency: '$',
+  currency: 'price.currency',
   price: '0',
   period: 'month',
-  launched: '1 March',
+  launched: {
+    day: '1',
+    month: 'March',
+  },
   structure: [
     'экономит время',
     'экономит время',
@@ -12,18 +15,4 @@ export const structures = [ {
     'экономит время',
     'экономит время',
   ]
-},
-{
-  currency: '$',
-  price: '10',
-  period: 'year',
-  launched: '10 December',
-  structure: [
-    'экономит силы',
-    'экономит силы',
-    'экономит силы',
-    'экономит силы',
-    'экономит силы',
-    'экономит силы',
-  ]
-} ]
+}]

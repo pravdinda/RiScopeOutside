@@ -16,10 +16,12 @@
       <div class="price-block__right">
         <div class="price-block__price-container">
           <div class="price-block__price">
-            <span>{{ priceValue.currency }}</span>
+            <span v-html="$t('price.currency')"></span>
             <span>{{ priceValue.price }}</span>
           </div>
-          <span class="price-block__time">/{{ priceValue.period }}</span>
+          <span class="price-block__time"
+            >/{{ $t(`global.${priceValue.period}`) }}</span
+          >
         </div>
         <button class="price-block__button price-block__button_price">
           To get a taste
@@ -27,7 +29,7 @@
       </div>
     </div>
     <p class="price-container__launch">
-      The planned launch date of the service is {{ priceValue.launched }}
+      {{ $t("price.launch") }} {{ launchDate }}
     </p>
   </div>
 </template>
@@ -39,6 +41,9 @@ const props = defineProps<{
 }>();
 const sliceStructure = computed(() => {
   return props.priceValue.structure.slice(0, 6);
+});
+const launchDate = computed(() => {
+  return `${props.priceValue.launched.day}  ${props.priceValue.launched.month}`;
 });
 </script>
 <style lang="scss">

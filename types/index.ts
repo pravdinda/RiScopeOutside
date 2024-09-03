@@ -17,7 +17,10 @@ export interface PriceValue {
   currency: string;
   price: string | number;
   period: string;
-  launched: string;
+  launched: {
+    day: string;
+    month: string;
+  };
   structure: Array<string>;
 }
 export interface Mechanic {
@@ -36,6 +39,6 @@ export interface Question {
   answer: string;
 }
 export interface Logo {
-  status: string | "";
+  status: string;
   isWhite?: boolean;
 }

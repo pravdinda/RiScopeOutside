@@ -21,7 +21,7 @@ defineProps({
 });
 
 useHead({
-  title: `RIScope - ${error.statusCode}`,
+  title: `RIScope Error`,
   meta: [
     { name: "description", content: "Risk management automation Service" },
   ],

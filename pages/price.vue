@@ -2,9 +2,7 @@
   <section class="price">
     <div class="wrapper">
       <div class="price__container">
-        <h1 class="price__title">
-          The system is in beta testing. <br />You can use the service for free
-        </h1>
+        <h1 class="price__title" v-html="$t('price.title')"></h1>
         <PagePrice
           v-for="(item, index) in structures"
           :priceValue="item"
@@ -21,7 +19,7 @@ definePageMeta({
   footerWelcome: false,
 });
 useHead({
-  title: "RIScope",
+  title: `RIScope price`,
   meta: [
     { name: "description", content: "Risk management automation Service" },
   ],

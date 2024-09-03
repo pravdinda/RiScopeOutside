@@ -1,9 +1,7 @@
 <template>
   <section class="process">
     <div class="process__header">
-      <h2 class="process__title">
-        {{ $t("risk.title") }}
-      </h2>
+      <h2 class="process__title" v-html="$t('risk.title')"></h2>
       <p class="process__description">
         {{ $t("risk.description") }}
       </p>

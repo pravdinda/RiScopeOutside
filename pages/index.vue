@@ -23,7 +23,7 @@ definePageMeta({
   footerWelcome: true,
 });
 useHead({
-  title: "RIScope",
+  title: `RIScope main`,
   meta: [
     { name: "description", content: "Risk management automation Service" },
   ],
