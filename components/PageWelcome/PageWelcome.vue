@@ -15,17 +15,17 @@
         <p class="raiting__comment">{{ $t("welcome.raitingUsersCount") }}</p>
       </div>
       <ul class="welcome__links">
-        <li>
-          <NuxtLink to="#" class="welcome__link"> Privacy </NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="#" class="welcome__link"> Terms </NuxtLink>
+        <li v-for="(item, index) in links" :key="index">
+          <NuxtLink :to="item.link" class="welcome__link">
+            {{ $t(`${item.name}[${index}].name`) }}
+          </NuxtLink>
         </li>
       </ul>
     </div>
   </section>
 </template>
 <script setup lang="ts">
+import { links } from "./links.list";
 import star from "@/public/img/star.svg";
 import type { PageWelcomeComponent } from "@/types/index";
 withDefaults(defineProps<PageWelcomeComponent>(), {

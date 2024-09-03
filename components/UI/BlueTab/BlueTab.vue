@@ -13,8 +13,8 @@
   padding: 80px 40px;
   width: 100%;
 
-  color: $background-color;
-  background-color: rgba(55, 47, 143, 1);
+  color: var(--bg-color);
+  background-color: var(--blue-color);
   background-image: url("img/bluetab_bg_l.svg");
   background-repeat: no-repeat;
   background-position: right;

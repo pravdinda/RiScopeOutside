@@ -6,6 +6,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+:root {
+  --bg-color: #{$background-color};
+  --text-color: #{$main-color};
+  --gray-color: #{$gray-color};
+  --blue-color: #{$blue-color};
+}
 html, body {
   font-family:
     Montserrat,
@@ -13,7 +19,8 @@ html, body {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 500;
-  background-color: $background-color;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 a {
   text-decoration: none;

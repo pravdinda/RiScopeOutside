@@ -17,9 +17,9 @@ withDefaults(defineProps<Logo>(), {
 .logo {
   display: flex;
   align-items: flex-end;
-  color: $main-color;
+  color: var(--text-color);
   &_white {
-    color: $background-color;
+    color: var(--bg-color);
   }
   &__title {
     margin: 0;
@@ -35,7 +35,7 @@ withDefaults(defineProps<Logo>(), {
     font-style: italic;
   }
   &:hover {
-    color: $blue-color;
+    color: var(--blue-color);
   }
 }
 </style>

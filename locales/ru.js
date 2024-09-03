@@ -14,6 +14,14 @@ export const ru = {
     subNavigation: [
       { name: 'Демонстрация' },
       { name: 'Попробовать' }
+    ],
+    welcomeNavigation: [
+      {
+        name: 'Конфиденциальность',
+      },
+      {
+        name: 'Условия'
+      }
     ]
   },
   welcome: {
@@ -137,7 +145,8 @@ export const ru = {
   price: {
     title: 'Сейчас стадия бета-тестирования. <br />Вы можете пользоваться этой услугой бесплатно.',
     currency: '&#8381;',
-    launch: 'Планируемой датой запуска сервиса является',
+    launch: 'Планируемой датой запуска ',
+    tasteButton: 'Попробовать',
   }
 }
 export default ru;

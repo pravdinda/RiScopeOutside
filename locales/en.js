@@ -14,6 +14,14 @@ const en = {
     subNavigation: [
       { name: 'See demo' },
       { name: 'Try free' }
+    ],
+    welcomeNavigation: [
+      {
+        name: 'Privacy',
+      },
+      {
+        name: 'Terms'
+      }
     ]
   },
   welcome: {
@@ -138,6 +146,7 @@ const en = {
     title: 'The system is in beta testing. <br />You can use the service for free',
     currency: '&dollar;',
     launch: 'The planned launch date of the service is ',
+    tasteButton: 'To get a taste',
   }
 }
 export default en;

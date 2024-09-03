@@ -24,7 +24,7 @@
           >
         </div>
         <button class="price-block__button price-block__button_price">
-          To get a taste
+          {{ $t("price.tasteButton") }}
         </button>
       </div>
     </div>
@@ -52,7 +52,7 @@ const launchDate = computed(() => {
   &__launch {
     font-size: 14px;
     line-height: 17px;
-    color: $gray-color;
+    color: var(--gray-color);
     text-align: center;
   }
 }
@@ -60,7 +60,7 @@ const launchDate = computed(() => {
   margin: 0 0 20px 0;
   padding: 39px 70px;
   width: 100%;
-  background-color: $blue-color;
+  background-color: var(--blue-color);
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
@@ -71,13 +71,13 @@ const launchDate = computed(() => {
     padding: 0 0 0 112px;
     display: flex;
     flex-direction: column;
-    border-left: 2px solid $background-color;
+    border-left: 2px solid var(--bg-color);
   }
   &__price-container {
     display: flex;
     align-items: flex-end;
     margin: 0 0 auto 0;
-    color: rgba(245, 245, 245, 1);
+    color: var(--bg-color);
   }
   &__structure-list {
     list-style: none;
@@ -88,7 +88,7 @@ const launchDate = computed(() => {
     -moz-columns: 2;
     font-size: 16px;
     line-height: 25px;
-    color: rgba(245, 245, 245, 1);
+    color: var(--bg-color);
   }
   &__structure-item {
     margin: 0 30px 20px 0;
@@ -115,9 +115,9 @@ const launchDate = computed(() => {
     @include base-button($min-w: 165px, $dark: true);
     &_price {
       height: 49px;
-      background-color: $background-color;
+      background-color: var(--bg-color);
       &:hover {
-        background-color: $main-color;
+        background-color: var(--main-color);
       }
     }
   }

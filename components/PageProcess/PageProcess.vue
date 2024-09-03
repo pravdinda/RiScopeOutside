@@ -82,8 +82,8 @@ import company_process from "@/public/img/company_process.svg";
     padding: 25px 40px;
     width: 817px;
     min-height: 171px;
-    background-color: $blue-color;
-    color: $background-color;
+    background-color: var(--blue-color);
+    color: var(--bg-color);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -91,7 +91,7 @@ import company_process from "@/public/img/company_process.svg";
   }
   &__content-title {
     margin: 0 0 30px 0;
-    color: $blue-color;
+    color: var(--blue-color);
     font-size: 30px;
     line-height: 36px;
     font-weight: 600;
