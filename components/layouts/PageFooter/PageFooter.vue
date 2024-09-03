@@ -6,8 +6,8 @@
   </div>
 </template>
 <script setup lang="ts">
-import FooterNavigation from "@/components/FooterNavigation/FooterNavigation";
-import FooterCopyright from "@/components/FooterCopyright/FooterCopyright";
+import FooterNavigation from "./FooterNavigation/FooterNavigation";
+import FooterCopyright from "./FooterCopyright/FooterCopyright";
 </script>
 <style lang="scss">
 .footer {

@@ -1,7 +1,7 @@
 <template>
   <section class="opportunities">
     <div class="opportunities__wrapper">
-      <h2 class="opportunities__title">Product opportunities</h2>
+      <h2 class="opportunities__title">{{ $t("opportunities.title") }}</h2>
       <ul class="opportunities__list">
         <li
           v-for="(item, index) in opportunities"
@@ -9,8 +9,13 @@
           class="opportunitie"
         >
           <div class="opportunitie__container">
-            <h3 class="opportunitie__title">{{ item.title }}</h3>
-            <div v-html="item.text" class="opportunitie__content"></div>
+            <h3 class="opportunitie__title">
+              {{ $t(`${item}[${index}].title`) }}
+            </h3>
+            <div
+              v-html="$t(`${item}[${index}].text`)"
+              class="opportunitie__content"
+            ></div>
           </div>
           <div class="opportunitie__preview">
             <div class="opportunitie__img"></div>

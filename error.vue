@@ -19,6 +19,7 @@ import type { NuxtError } from "#app";
 defineProps({
   error: Object as () => NuxtError,
 });
+
 useHead({
   title: `RIScope - ${error.statusCode}`,
   meta: [

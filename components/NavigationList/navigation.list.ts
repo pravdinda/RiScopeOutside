@@ -1,10 +1,10 @@
 export const navigation = [
   {
-    name: 'Price',
+    name: 'navigation.mainNavigaion',
     link: '/price'
   },
   {
-    name: 'Document',
+    name: 'navigation.mainNavigaion',
     link: '/'
   }
 ]

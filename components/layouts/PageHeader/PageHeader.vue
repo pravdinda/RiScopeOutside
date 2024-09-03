@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import PageLogo from "@/components/PageLogo/PageLogo";
 import NavigationList from "@/components/NavigationList/NavigationList";
-import SubNavigation from "@/components/SubNavigation/SubNavigation";
+import SubNavigation from "./SubNavigation/SubNavigation";
 </script>
 <style lang="scss">
 .header {

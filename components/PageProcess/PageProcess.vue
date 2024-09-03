@@ -2,21 +2,19 @@
   <section class="process">
     <div class="process__header">
       <h2 class="process__title">
-        We changed the way <br />
-        we assess risk
+        {{ $t("risk.title") }}
       </h2>
       <p class="process__description">
-        With our service, you can minimize risks, improve operational control,
-        and significantly save time and resources
+        {{ $t("risk.description") }}
       </p>
     </div>
     <div class="process__content">
       <div class="process__content-block">
-        <h3 class="process__content-title">Riscope process view</h3>
+        <h3 class="process__content-title">{{ $t("risk.riscope_process") }}</h3>
         <img :src="riscope_process" />
       </div>
       <div class="process__content-block">
-        <h3 class="process__content-title">Your company process view</h3>
+        <h3 class="process__content-title">{{ $t("risk.company_process") }}</h3>
         <img :src="company_process" />
       </div>
       <div class="process__banner banner">
@@ -24,25 +22,25 @@
           <div class="banner__progress">
             <div class="banner__progress-container">
               <div class="banner__label">
-                <span>Riscope process view</span>
-                <span>45 min</span>
+                <span>{{ $t("risk.riscope_process") }}</span>
+                <span>45 {{ $t("global.min") }}</span>
               </div>
               <progress value="10" max="100" class="banner__progress-item" />
             </div>
             <div class="banner__progress-container">
               <div class="banner__label">
-                <span>Your company process view</span>
-                <span>7 hour</span>
+                <span>{{ $t("risk.company_process") }}</span>
+                <span>7 {{ $t("global.hour") }}</span>
               </div>
               <progress value="100" max="100" class="banner__progress-item" />
             </div>
           </div>
-          <span class="banner__hours">– 6h 15min</span>
+          <span class="banner__hours"
+            >– 6{{ $t("global.hour_short") }} 15{{ $t("global.min") }}</span
+          >
         </div>
         <p class="banner__text">
-          Our service saves more than 6 hours of your team's time every week. It
-          covers all areas of risk and helps to optimize the budget, turning
-          risk management into a competitive advantage.
+          {{ $t("risk.banner_text") }}
         </p>
       </div>
     </div>

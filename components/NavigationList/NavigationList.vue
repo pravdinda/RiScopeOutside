@@ -1,9 +1,13 @@
 <template>
   <ul class="navigation">
-    <li class="navigation__item" v-for="item in navigation">
-      <NuxtLink :to="item.link" class="navigation__link">{{
-        item.name
-      }}</NuxtLink>
+    <li
+      class="navigation__item"
+      v-for="(item, index) in navigation"
+      :key="index"
+    >
+      <NuxtLink :to="item.link" class="navigation__link">
+        {{ $t(`navigation.mainNavigation[${index}].name`) }}
+      </NuxtLink>
     </li>
   </ul>
 </template>
