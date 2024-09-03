@@ -17,8 +17,38 @@
               class="opportunitie__content"
             ></div>
           </div>
-          <div class="opportunitie__preview">
+          <div class="opportunitie__preview" v-if="index !== 3">
             <div class="opportunitie__img"></div>
+          </div>
+          <div
+            class="opportunitie__preview opportunitie__preview_swiper"
+            v-else
+          >
+            <Swiper
+              :modules="[SwiperPagination]"
+              :pagination="{
+                clickable: true,
+              }"
+              :slides-per-view="1"
+              :loop="true"
+              :centeredSlides="true"
+            >
+              <SwiperSlide>
+                <div class="opportunitie__img"></div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div class="opportunitie__img"></div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div class="opportunitie__img"></div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div class="opportunitie__img"></div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div class="opportunitie__img"></div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </li>
       </ul>
@@ -139,6 +169,15 @@ defineProps<{
       height: 100%;
       justify-content: center;
       align-items: center;
+      &_swiper {
+        width: 53%;
+      }
+      &_swiper .swiper-pagination-bullet-active {
+        background: var(--text-color);
+      }
+      &_swiper .opportunitie__img {
+        margin: 0 auto;
+      }
     }
     .opportunitie__container {
       margin: auto 0 auto 0;
