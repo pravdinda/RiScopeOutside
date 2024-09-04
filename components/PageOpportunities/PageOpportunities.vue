@@ -4,7 +4,7 @@
       <h2 class="opportunities__title">{{ $t("opportunities.title") }}</h2>
       <ul class="opportunities__list">
         <li
-          v-for="({ title, text }, index) in opportunities"
+          v-for="({ title, text, slider }, index) in opportunities"
           :key="index"
           class="opportunitie"
         >
@@ -17,7 +17,7 @@
               class="opportunitie__content"
             ></div>
           </div>
-          <div class="opportunitie__preview" v-if="index !== 3">
+          <div class="opportunitie__preview" v-if="!slider">
             <div class="opportunitie__img"></div>
           </div>
           <div
@@ -32,6 +32,7 @@
               :slides-per-view="1"
               :loop="true"
               :centeredSlides="true"
+              class="opportunitie__slider"
             >
               <SwiperSlide>
                 <div class="opportunitie__img"></div>
@@ -140,6 +141,9 @@ defineProps<{
     line-height: 25px;
     font-weight: 500;
   }
+  &__slider {
+    height: 350px;
+  }
   &__preview {
     width: 58%;
     display: flex;
@@ -151,6 +155,15 @@ defineProps<{
       height: 100%;
       position: absolute;
       z-index: 1;
+    }
+    &_swiper {
+      width: 53%;
+    }
+    &_swiper .swiper-pagination-bullet-active {
+      background: var(--text-color);
+    }
+    &_swiper .opportunitie__img {
+      margin: 0 auto;
     }
   }
   &__img {
@@ -169,15 +182,6 @@ defineProps<{
       height: 100%;
       justify-content: center;
       align-items: center;
-      &_swiper {
-        width: 53%;
-      }
-      &_swiper .swiper-pagination-bullet-active {
-        background: var(--text-color);
-      }
-      &_swiper .opportunitie__img {
-        margin: 0 auto;
-      }
     }
     .opportunitie__container {
       margin: auto 0 auto 0;

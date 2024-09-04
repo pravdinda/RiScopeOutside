@@ -33,6 +33,7 @@ export interface Mechanic {
 export interface Opportunities {
   title: string;
   text: string;
+  slider?: boolean;
 }
 export interface Question {
   question: string;
