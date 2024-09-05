@@ -5,13 +5,14 @@
       v-for="(item, index) in navigation"
       :key="index"
     >
-      <NuxtLink :to="item.link" class="navigation__link">
+      <NuxtLink :to="localePath(item.link)" class="navigation__link">
         {{ $t(`navigation.mainNavigation[${index}].name`) }}
       </NuxtLink>
     </li>
   </ul>
 </template>
 <script setup lang="ts">
+const localePath = useLocalePath();
 import { navigation } from "./navigation.list";
 </script>
 <style lang="scss">

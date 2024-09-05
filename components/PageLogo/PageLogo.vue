@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink to="/">
+  <NuxtLink :to="localePath('/')">
     <div class="logo" :class="{ logo_white: isWhite }">
       <h2 class="logo__title">Riscope</h2>
       <span class="logo__status">{{ status }}</span>
@@ -8,6 +8,7 @@
 </template>
 <script setup lang="ts">
 import type { Logo } from "@/types/index";
+const localePath = useLocalePath();
 withDefaults(defineProps<Logo>(), {
   status: "",
   isWhite: false,

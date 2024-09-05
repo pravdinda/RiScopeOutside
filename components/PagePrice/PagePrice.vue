@@ -117,7 +117,7 @@ const launchDate = computed(() => {
       height: 49px;
       background-color: var(--bg-color);
       &:hover {
-        background-color: var(--main-color);
+        background-color: var(--text-color);
       }
     }
   }

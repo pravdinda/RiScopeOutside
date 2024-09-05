@@ -5,7 +5,7 @@
       v-for="(item, index) in subnavigation"
       :key="index"
     >
-      <NuxtLink :to="item.link">{{
+      <NuxtLink :to="localePath(item.link)">{{
         $t(`navigation.subNavigation[${index}].name`)
       }}</NuxtLink>
     </li>
@@ -13,6 +13,7 @@
 </template>
 <script setup lang="ts">
 import { subnavigation } from "./subnavigation.list";
+const localePath = useLocalePath();
 </script>
 <style lang="scss">
 .subnavigation {

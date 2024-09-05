@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: process.env.NODE_ENV === 'development' },
   modules: ["@nuxt/image", "@nuxtjs/i18n", "nuxt-swiper"],
   i18n: {
-    strategy: 'no_prefix',
+    strategy: 'prefix_and_default',
     locales: [
       {
         code: 'en',

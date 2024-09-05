@@ -5,6 +5,6 @@ export const navigation = [
   },
   {
     name: 'navigation.mainNavigaion',
-    link: '/'
+    link: ''
   }
 ]
