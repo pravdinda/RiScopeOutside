@@ -1,0 +1,1 @@
+export { default as PageQuestions } from './PageQuestions.vue';

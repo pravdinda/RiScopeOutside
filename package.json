@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "RIScope",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,7 +12,9 @@
   "dependencies": {
     "@nuxt/image": "^1.7.0",
     "@nuxtjs/i18n": "^8.3.3",
+    "normalize.css": "^8.0.1",
     "nuxt": "^3.12.4",
+    "nuxt-swiper": "^1.2.2",
     "vue": "latest"
   },
   "devDependencies": {
